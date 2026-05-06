@@ -105,7 +105,7 @@ function App() {
       const cartItems = Cart.get();
       const result = await SB.createCheckout(
         cartItems,
-        window.location.origin + "/success",
+        window.location.origin + "/success?session_id={CHECKOUT_SESSION_ID}",
         window.location.origin + "/cart"
       );
       if (result.url) {

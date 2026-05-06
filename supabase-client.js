@@ -57,7 +57,10 @@ async function createCheckout(items, successUrl, cancelUrl) {
     body: JSON.stringify({
       items: items.map(i => ({
         product_id: i.product_id,
+        title: i.title,
+        price: i.price,
         quantity: i.quantity,
+        image: i.image || "",
       })),
       success_url: successUrl,
       cancel_url: cancelUrl,
