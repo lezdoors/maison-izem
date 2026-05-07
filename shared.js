@@ -96,7 +96,7 @@ const I18N = {
     "ft.cat":"Seating·Light·Vessels·Textiles·Commissions",
     "ft.at":"The nine hands·Matter·Lead times·Care & repair",
     "ft.ho":"About·Journal·Visit Marrakech·Write to atelier",
-    "ft.he":"Shipping·Returns·Editions·Terms",
+    "ft.he":"Shipping & delivery·Returns·Editions·Terms",
     "ft.bot":"© 1974–2026 · Atlas Perle · Derb el Ferran, Marrakech · All pieces numbered, signed, released by hand."
   },
   fr: {
@@ -333,12 +333,15 @@ function Footer() {
           <Reveal className="sub-box">
             <label>{t("ft.subscribe")}</label>
             <input type="email" placeholder={t("ft.subPh")}/>
-            <a className="go" href="#">{t("ft.subCta")} <span>→</span></a>
+            <button className="go" type="button" onClick={(e)=>{
+              const input = e.target.closest(".sub-box").querySelector("input");
+              if(input && input.value) { input.value = ""; input.placeholder = "Added — merci."; }
+            }}>{t("ft.subCta")} <span>→</span></button>
           </Reveal>
           <Reveal delay={100}>
             <h5>{t("ft.h.cat")}</h5>
             <div className="list">{cat.map((x,i)=>{
-              const links = ["/collection","/collection","/collection","/collection","/collection"];
+              const links = ["/collection?cat=Poufs","/collection?cat=Lighting","/collection?cat=Furniture","/collection?cat=Tables","/collection"];
               return <a href={links[i] || "/collection"} key={i}>{x}</a>;
             })}</div>
           </Reveal>
@@ -358,7 +361,10 @@ function Footer() {
           </Reveal>
           <Reveal delay={400}>
             <h5>{t("ft.h.help")}</h5>
-            <div className="list">{he.map((x,i)=><a href="#" key={i}>{x}</a>)}</div>
+            <div className="list">{he.map((x,i)=>{
+              const links = ["/about","/about","/collection","/about"];
+              return <a href={links[i] || "/about"} key={i}>{x}</a>;
+            })}</div>
           </Reveal>
         </div>
         <div className="bot">
