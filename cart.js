@@ -33,6 +33,13 @@ function addToCart(product) {
     });
   }
   saveCart(cart);
+  window.dataLayer && window.dataLayer.push({
+    event: 'add_to_cart',
+    item_id: product.id,
+    item_name: product.title,
+    price: (product.price || 0) / 100,
+    currency: 'USD'
+  });
 }
 
 function removeFromCart(productId) {

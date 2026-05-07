@@ -75,7 +75,7 @@ function Gallery({images}) {
   return (
     <div className="gallery">
       <div className="main">
-        <img src={main} alt="" key={main}/>
+        <img src={main} alt="" key={main} fetchpriority="high"/>
       </div>
       <div className="thumbs">
         {images.slice(0,4).map((src, idx) => (
@@ -88,9 +88,14 @@ function Gallery({images}) {
   );
 }
 
+function isEditionClosed(product) {
+  return product.status === 'closed' || product.edition_remaining === 0;
+}
+
 function Info({product}) {
   const [added, setAdded] = useState(false);
   const cat = CAT_LABELS[product.category] || product.category;
+  const closed = isEditionClosed(product);
 
   function handleAdd() {
     Cart.add(product);
@@ -110,7 +115,7 @@ function Info({product}) {
       )}
       <div className="price-row">
         <span className="v">{SB.formatPrice(product.price)}</span>
-        <small>Price — USD</small>
+        <small>{closed ? "Edition closed" : "Price — USD"}</small>
       </div>
       <div className="specs">
         {product.materials && (
@@ -124,14 +129,26 @@ function Info({product}) {
         )}
         <div className="row"><span className="k">Delivery</span><span className="val">Worldwide, insured</span></div>
       </div>
-      <div className="actions">
-        <button className="btn solid" onClick={handleAdd}>Add to cart <span className="arrow"/></button>
-        <a className="btn ghost" href="mailto:atelier@perledelatlas.com">Write to atelier</a>
-      </div>
+      {closed ? (
+        <div className="actions">
+          <a className="btn solid" href={`mailto:atelier@perledelatlas.com?subject=Private%20Commission%20Inquiry%20—%20${encodeURIComponent(product.title)}`}>
+            Inquire for private commission <span className="arrow"/>
+          </a>
+        </div>
+      ) : (
+        <div className="actions">
+          <button className="btn solid" onClick={handleAdd}>Add to cart <span className="arrow"/></button>
+          <a className="btn ghost" href="mailto:atelier@perledelatlas.com">Write to atelier</a>
+        </div>
+      )}
       {added && (
         <div className="added-msg">Added to cart</div>
       )}
-      <div className="promise">— Made to order. Dispatched within 14 days from Marrakech.</div>
+      {closed ? (
+        <div className="promise">— This edition has closed. Private commissions are available on request.</div>
+      ) : (
+        <div className="promise">— Made to order. Dispatched within 14 days from Marrakech.</div>
+      )}
     </div>
   );
 }
@@ -189,7 +206,10 @@ function App() {
     ]).then(([p, all]) => {
       setProduct(p);
       setAllProducts(all);
-      if (p) document.title = `${p.title} — Perle de l'Atlas`;
+      if (p) {
+        document.title = `${p.title} — Perle de l'Atlas`;
+        window.dataLayer && window.dataLayer.push({event:'view_item',item_id:p.id,item_name:p.title,price:p.price/100,currency:'USD',item_category:p.category});
+      }
       setLoading(false);
     }).catch(err => { console.error(err); setLoading(false); });
   }, [slug]);

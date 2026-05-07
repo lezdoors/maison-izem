@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Serif:ital,wght@1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<link rel="preload" as="image" href="/media/hero/hero-riad-curtains.webp" fetchpriority="high">
 <style>
 /* Hero — breeze animation styles */
 .hero-breeze{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
@@ -152,7 +153,7 @@ function Hero() {
   return (
     <section className="hero-breeze">
       <div className="hero-base">
-        <video autoPlay muted loop playsInline poster="/media/hero/hero-riad-curtains.webp">
+        <video autoPlay muted loop playsInline poster="/media/hero/hero-riad-curtains.webp" disablePictureInPicture disableRemotePlayback preload="auto">
           <source src="/media/hero/hero-video-4k.mp4" type="video/mp4"/>
         </video>
       </div>
@@ -227,19 +228,24 @@ function FeaturedProducts() {
           </Reveal>
         </div>
         <div className="grid-dense">
-          {products.slice(0, 4).map((p, i) => (
+          {products.slice(0, 4).map((p, i) => {
+            const closed = p.status === 'closed' || p.edition_remaining === 0;
+            return (
             <Reveal className="card" key={p.id} delay={i * 80}>
               <a href={`/product?p=${p.slug}`} style={{display:"block",color:"inherit"}}>
                 <div className="media">
-                  <img className="primary" src={SB.productImageUrl(p.images?.[0])} alt={p.title} loading="lazy"/>
+                  <img className="primary" src={SB.productImageUrl(p.images?.[0])} alt={p.title} loading={i < 2 ? "eager" : "lazy"}/>
                   {p.images?.[1] && (
                     <img className="alt" src={SB.productImageUrl(p.images[1])} alt="" loading="lazy"/>
                   )}
-                  <button className="quickadd" onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    Cart.add(p);
-                  }}>Add to cart</button>
+                  {closed && <div className="tag closed">Edition closed</div>}
+                  {!closed && (
+                    <button className="quickadd" onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      Cart.add(p);
+                    }}>Add to cart</button>
+                  )}
                 </div>
                 <div className="meta">
                   <div className="name">{p.title}</div>
@@ -247,7 +253,8 @@ function FeaturedProducts() {
                 </div>
               </a>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

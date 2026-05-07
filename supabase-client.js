@@ -1,3 +1,6 @@
+// Data layer for conversion tracking (Google Ads / GTM)
+window.dataLayer = window.dataLayer || [];
+
 // Supabase client for Perle de l'Atlas
 const SUPABASE_URL = "https://unsenfjlqqqjibbnbpur.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVuc2VuZmpscXFxamliYm5icHVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NzIxNTcsImV4cCI6MjA5MjQ0ODE1N30.6wjQiZvYS_SrqOqw0fuDWQ5I_uVZEeNDGxJr-PknrXc";

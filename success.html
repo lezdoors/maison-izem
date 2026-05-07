@@ -44,7 +44,18 @@ function App() {
     const sessionId = params.get("session_id");
     if (sessionId) {
       SB.fetchOrderBySession(sessionId)
-        .then(data => { if (data) setOrder(data); })
+        .then(data => {
+          if (data) {
+            setOrder(data);
+            window.dataLayer && window.dataLayer.push({
+              event: 'purchase',
+              transaction_id: data.order_number,
+              value: (data.total_amount || 0) / 100,
+              currency: 'USD',
+              items: (data.items || []).map(i => ({item_id: i.product_id, item_name: i.title, price: (i.price || 0) / 100, quantity: i.quantity}))
+            });
+          }
+        })
         .catch(() => {});
     }
   }, []);

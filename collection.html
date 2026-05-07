@@ -31,20 +31,28 @@ const CATEGORIES = [
 
 const CAT_LABELS = {Poufs:"Poufs",Tables:"Tables",Lighting:"Lighting",Furniture:"Furniture"};
 
+function isEditionClosed(product) {
+  return product.status === 'closed' || product.edition_remaining === 0;
+}
+
 function ProductCard({product}) {
   const img1 = SB.productImageUrl(product.images?.[0]);
   const img2 = product.images?.[1] ? SB.productImageUrl(product.images[1]) : img1;
+  const closed = isEditionClosed(product);
   return (
     <a className="card" href={`/product?p=${product.slug}`}>
       <div className="media">
         <img className="primary" src={img1} alt={product.title} loading="lazy"/>
         <img className="alt" src={img2} alt="" loading="lazy"/>
         <div className="lot">{CAT_LABELS[product.category] || product.category}</div>
-        <button className="quickadd" onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          Cart.add(product);
-        }}>Add to cart</button>
+        {closed && <div className="tag closed">Edition closed</div>}
+        {!closed && (
+          <button className="quickadd" onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            Cart.add(product);
+          }}>Add to cart</button>
+        )}
       </div>
       <div className="meta">
         <div className="name">{product.title}</div>
