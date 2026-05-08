@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#0a0807"/>
-  <path d="M16 6 L22 16 L16 26 L10 16 Z" fill="#c9a84c"/>
+  <rect width="32" height="32" fill="#0a0807"/>
+  <g transform="translate(16,16)">
+    <!-- Octagonal frame — Moroccan geometry -->
+    <polygon points="0,-12 8.5,-8.5 12,0 8.5,8.5 0,12 -8.5,8.5 -12,0 -8.5,-8.5" fill="none" stroke="#c9a84c" stroke-width="1.2"/>
+    <!-- Inner 4-point star -->
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#c9a84c"/>
+  </g>
 </svg>
