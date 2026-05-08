@@ -3,4 +3,4 @@ Allow: /
 Disallow: /cart
 Disallow: /success
 
-Sitemap: https://www.atlasperle.com/sitemap.xml
+Sitemap: https://www.maisonizem.com/sitemap.xml

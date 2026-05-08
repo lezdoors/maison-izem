@@ -4,15 +4,15 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-<title>Object — Atlas Perle</title>
+<title>Object — Maison Izem</title>
 <meta name="description" content="Handcrafted in Marrakech. Signed by the artisan, numbered, and shipped worldwide in cotton and cedar."/>
-<link rel="canonical" href="https://www.atlasperle.com/product"/>
+<link rel="canonical" href="https://www.maisonizem.com/product"/>
 <meta property="og:type" content="product"/>
-<meta property="og:site_name" content="Atlas Perle"/>
-<meta property="og:title" content="Atlas Perle — Handcrafted Object"/>
+<meta property="og:site_name" content="Maison Izem"/>
+<meta property="og:title" content="Maison Izem — Handcrafted Object"/>
 <meta property="og:description" content="Handcrafted in Marrakech, signed by the artisan, shipped worldwide."/>
-<meta property="og:url" content="https://www.atlasperle.com/product"/>
-<meta property="og:image" content="https://www.atlasperle.com/media/hero/hero-warm-salon.webp"/>
+<meta property="og:url" content="https://www.maisonizem.com/product"/>
+<meta property="og:image" content="https://www.maisonizem.com/media/hero/hero-warm-salon.webp"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +115,7 @@ function Info({product}) {
   return (
     <div className="info">
       <div className="crumbs">
-        <a href="/">Perle de l'Atlas</a> · <a href="/collection">Collection</a> · <span>{cat}</span>
+        <a href="/">Maison Izem</a> · <a href="/collection">Collection</a> · <span>{cat}</span>
       </div>
       <div className="eyebrow">Catalogue · {cat}</div>
       <h1>{product.title}</h1>
@@ -140,14 +140,14 @@ function Info({product}) {
       </div>
       {closed ? (
         <div className="actions">
-          <a className="btn solid" href={`mailto:atelier@perledelatlas.com?subject=Private%20Commission%20Inquiry%20—%20${encodeURIComponent(product.title)}`}>
+          <a className="btn solid" href={`mailto:atelier@maisonizem.com?subject=Private%20Commission%20Inquiry%20—%20${encodeURIComponent(product.title)}`}>
             Inquire for private commission <span className="arrow"/>
           </a>
         </div>
       ) : (
         <div className="actions">
           <button className="btn solid" onClick={handleAdd}>Add to cart <span className="arrow"/></button>
-          <a className="btn ghost" href="mailto:atelier@perledelatlas.com">Write to atelier</a>
+          <a className="btn ghost" href="mailto:atelier@maisonizem.com">Write to atelier</a>
         </div>
       )}
       {added && (
@@ -216,13 +216,13 @@ function App() {
       setProduct(p);
       setAllProducts(all);
       if (p) {
-        document.title = `${p.title} — Atlas Perle`;
+        document.title = `${p.title} — Maison Izem`;
         const ogTitle = document.querySelector('meta[property="og:title"]');
         const ogDesc = document.querySelector('meta[property="og:description"]');
         const ogImg = document.querySelector('meta[property="og:image"]');
-        if (ogTitle) ogTitle.content = `${p.title} — Atlas Perle`;
+        if (ogTitle) ogTitle.content = `${p.title} — Maison Izem`;
         if (ogDesc) ogDesc.content = p.description || `Handcrafted ${p.title}, signed by the artisan.`;
-        if (ogImg && p.images?.[0]) ogImg.content = `https://www.atlasperle.com${SB.productImageUrl(p.images[0])}`;
+        if (ogImg && p.images?.[0]) ogImg.content = `https://www.maisonizem.com${SB.productImageUrl(p.images[0])}`;
         window.dataLayer && window.dataLayer.push({event:'view_item',item_id:p.id,item_name:p.title,price:p.price/100,currency:'USD',item_category:p.category});
       }
       setLoading(false);

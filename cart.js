@@ -1,4 +1,4 @@
-// Cart logic for Perle de l'Atlas
+// Cart logic for Maison Izem
 // localStorage key: "perle-cart"
 const CART_KEY = "perle-cart";
 

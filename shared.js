@@ -47,7 +47,7 @@ const I18N = {
     "nav.collection":"Collection","nav.poufs":"Poufs","nav.lights":"Lights","nav.editions":"Editions","nav.matter":"Matter",
     "nav.atelier":"Atelier","nav.journal":"Journal","nav.commissions":"Commissions",
     "nav.search":"Search","nav.account":"Account","nav.cart":"Cart",
-    "hero.meta1L":"Atlas Perle — House of objects","hero.meta1R":"Est. Marrakech, 1974",
+    "hero.meta1L":"Maison Izem — House of objects","hero.meta1R":"Est. Marrakech, 1974",
     "hero.meta2L":"Catalogue IX","hero.meta2R":"Spring 2026 · Release in 4 plates",
     "hero.lot":"Catalogue IX · Plate 01",
     "hero.spec.ed":"Ed.","hero.spec.hand":"Hand","hero.spec.days":"9 days","hero.spec.bench":"at the bench",
@@ -81,7 +81,7 @@ const I18N = {
     "ed.body":"Each edition is fixed at release and never extended. When numbered, it closes; what remains remains.",
     "ed.remain":"remaining","ed.of":"of",
     "prov.eyebrow":"V · Provenance","prov.headline":"A house since <em>1974.</em>",
-    "prov.body":"Atlas Perle is the catalogue of Atelier nº 7 — nine craftsmen off a narrow street in the old medina of Marrakech. Cedar from Azrou. Bone from Souk el Khemis. Hides from Tannery Chouara, a house we have kept since the first piece was signed. Nothing arrives that we have not touched first; nothing leaves that has not been signed.",
+    "prov.body":"Maison Izem is the catalogue of Atelier nº 7 — nine craftsmen off a narrow street in the old medina of Marrakech. Cedar from Azrou. Bone from Souk el Khemis. Hides from Tannery Chouara, a house we have kept since the first piece was signed. Nothing arrives that we have not touched first; nothing leaves that has not been signed.",
     "prov.live":"Live · atelier nº 7",
     "prov.cert.estK":"Est.","prov.cert.estV":"1974 · Marrakech",
     "prov.cert.craftK":"Craftsmen","prov.cert.craftV":"Nine hands",
@@ -97,13 +97,13 @@ const I18N = {
     "ft.at":"The nine hands·Matter·Lead times·Care & repair",
     "ft.ho":"About·Journal·Visit Marrakech·Write to atelier",
     "ft.he":"Shipping & delivery·Returns·Editions·Terms",
-    "ft.bot":"© 1974–2026 · Atlas Perle · Derb el Ferran, Marrakech · All pieces numbered, signed, released by hand."
+    "ft.bot":"© 1974–2026 · Maison Izem · Derb el Ferran, Marrakech · All pieces numbered, signed, released by hand."
   },
   fr: {
     "nav.collection":"Collection","nav.poufs":"Poufs","nav.lights":"Lumière","nav.editions":"Éditions","nav.matter":"Matière",
     "nav.atelier":"Atelier","nav.journal":"Journal","nav.commissions":"Sur-mesure",
     "nav.search":"Rechercher","nav.account":"Compte","nav.cart":"Panier",
-    "hero.meta1L":"Atlas Perle — Maison d'objets","hero.meta1R":"Fondée à Marrakech, 1974",
+    "hero.meta1L":"Maison Izem — Maison d'objets","hero.meta1R":"Fondée à Marrakech, 1974",
     "hero.meta2L":"Catalogue IX","hero.meta2R":"Printemps 2026 · Parution en 4 planches",
     "hero.lot":"Catalogue IX · Planche 01",
     "hero.spec.ed":"Éd.","hero.spec.hand":"Main","hero.spec.days":"9 jours","hero.spec.bench":"à l'atelier",
@@ -137,7 +137,7 @@ const I18N = {
     "ed.body":"Chaque édition est fixée à la sortie et n'est jamais prolongée. Une fois numérotée, elle se ferme ; ce qui reste reste.",
     "ed.remain":"restantes","ed.of":"sur",
     "prov.eyebrow":"V · Provenance","prov.headline":"Une maison depuis <em>1974.</em>",
-    "prov.body":"Atlas Perle est le catalogue de l'Atelier nº 7 — neuf artisans sur une ruelle de la vieille médina de Marrakech. Cèdre d'Azrou. Os du Souk el Khemis. Cuirs de la Tannerie Chouara, une maison que nous fréquentons depuis la première pièce signée. Rien n'arrive sans que nous l'ayons d'abord touché ; rien ne part sans avoir été signé.",
+    "prov.body":"Maison Izem est le catalogue de l'Atelier nº 7 — neuf artisans sur une ruelle de la vieille médina de Marrakech. Cèdre d'Azrou. Os du Souk el Khemis. Cuirs de la Tannerie Chouara, une maison que nous fréquentons depuis la première pièce signée. Rien n'arrive sans que nous l'ayons d'abord touché ; rien ne part sans avoir été signé.",
     "prov.live":"En direct · atelier nº 7",
     "prov.cert.estK":"Fondée","prov.cert.estV":"1974 · Marrakech",
     "prov.cert.craftK":"Artisans","prov.cert.craftV":"Neuf mains",
@@ -153,13 +153,13 @@ const I18N = {
     "ft.at":"Les neuf mains·Matière·Délais·Soin & réparation",
     "ft.ho":"À propos·Journal·Visiter Marrakech·Écrire à l'atelier",
     "ft.he":"Expédition·Retours·Éditions·CGV",
-    "ft.bot":"© 1974–2026 · Atlas Perle · Derb el Ferran, Marrakech · Toutes les pièces numérotées, signées, libérées à la main."
+    "ft.bot":"© 1974–2026 · Maison Izem · Derb el Ferran, Marrakech · Toutes les pièces numérotées, signées, libérées à la main."
   },
   ar: {
     "nav.collection":"المجموعة","nav.poufs":"بوف","nav.lights":"إضاءة","nav.editions":"الإصدارات","nav.matter":"المواد",
     "nav.atelier":"الورشة","nav.journal":"المجلة","nav.commissions":"طلبات خاصة",
     "nav.search":"بحث","nav.account":"الحساب","nav.cart":"السلة",
-    "hero.meta1L":"أطلس بيرل — دار الأشياء","hero.meta1R":"تأسست في مراكش، ١٩٧٤",
+    "hero.meta1L":"ميزون إزم — دار الأشياء","hero.meta1R":"تأسست في مراكش، ١٩٧٤",
     "hero.meta2L":"كتالوج التاسع","hero.meta2R":"ربيع ٢٠٢٦ · إصدار في ٤ لوحات",
     "hero.lot":"كتالوج التاسع · لوحة ٠١",
     "hero.spec.ed":"إصدار","hero.spec.hand":"اليد","hero.spec.days":"٩ أيام","hero.spec.bench":"على الطاولة",
@@ -193,7 +193,7 @@ const I18N = {
     "ed.body":"كل إصدار يُحدد عند الإطلاق ولا يُمدد أبدًا. عند ترقيمها، تُغلق؛ ما تبقى يبقى.",
     "ed.remain":"متبقية","ed.of":"من",
     "prov.eyebrow":"V · المنشأ","prov.headline":"دار منذ <em>١٩٧٤.</em>",
-    "prov.body":"أطلس بيرل هو كتالوج ورشة رقم ٧ — تسعة حرفيين على زقاق ضيق في مدينة مراكش القديمة. أرز من أزرو. عظم من سوق الخميس. جلود من دبغة الشوارة، دار حافظنا عليها منذ توقيع أول قطعة. لا شيء يصل دون أن نلمسه أولاً؛ لا شيء يغادر دون أن يُوقَّع.",
+    "prov.body":"ميزون إزم هو كتالوج ورشة رقم ٧ — تسعة حرفيين على زقاق ضيق في مدينة مراكش القديمة. أرز من أزرو. عظم من سوق الخميس. جلود من دبغة الشوارة، دار حافظنا عليها منذ توقيع أول قطعة. لا شيء يصل دون أن نلمسه أولاً؛ لا شيء يغادر دون أن يُوقَّع.",
     "prov.live":"مباشر · ورشة رقم ٧",
     "prov.cert.estK":"تأسست","prov.cert.estV":"١٩٧٤ · مراكش",
     "prov.cert.craftK":"حرفيون","prov.cert.craftV":"تسع أيدٍ",
@@ -209,7 +209,7 @@ const I18N = {
     "ft.at":"الأيدي التسع·المادة·المهل·العناية والإصلاح",
     "ft.ho":"عن الدار·المجلة·زيارة مراكش·اكتب إلى الورشة",
     "ft.he":"الشحن·الإرجاع·الإصدارات·الشروط",
-    "ft.bot":"© ١٩٧٤–٢٠٢٦ · أطلس بيرل · درب الفران، مراكش · جميع القطع مرقمة، موقعة، ومُصدرة باليد."
+    "ft.bot":"© ١٩٧٤–٢٠٢٦ · ميزون إزم · درب الفران، مراكش · جميع القطع مرقمة، موقعة، ومُصدرة باليد."
   }
 };
 const LangCtx = React.createContext({lang:"en", setLang:()=>{}});
@@ -282,7 +282,7 @@ function Nav() {
     <nav className={`top ${scrolled ? "scrolled" : ""}`}>
       <a className="brand" href="/">
         <span className="pin"/>
-        <span className="name">Atlas <em>Perle</em></span>
+        <span className="name">Maison <em>Izem</em></span>
       </a>
       <div className="links">
         {links.map(([href, key]) => <a href={href} key={href}>{t(key)}</a>)}
@@ -355,7 +355,7 @@ function Footer() {
           <Reveal delay={300}>
             <h5>{t("ft.h.house")}</h5>
             <div className="list">{ho.map((x,i)=>{
-              const links = ["/about","/about","/about","mailto:atelier@atlasperle.ma"];
+              const links = ["/about","/about","/about","mailto:atelier@maisonizem.com"];
               return <a href={links[i] || "/about"} key={i}>{x}</a>;
             })}</div>
           </Reveal>
