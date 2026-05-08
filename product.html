@@ -4,7 +4,16 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-<title>Object — Perle de l'Atlas</title>
+<title>Object — Atlas Perle</title>
+<meta name="description" content="Handcrafted in Marrakech. Signed by the artisan, numbered, and shipped worldwide in cotton and cedar."/>
+<link rel="canonical" href="https://www.atlasperle.com/product"/>
+<meta property="og:type" content="product"/>
+<meta property="og:site_name" content="Atlas Perle"/>
+<meta property="og:title" content="Atlas Perle — Handcrafted Object"/>
+<meta property="og:description" content="Handcrafted in Marrakech, signed by the artisan, shipped worldwide."/>
+<meta property="og:url" content="https://www.atlasperle.com/product"/>
+<meta property="og:image" content="https://www.atlasperle.com/media/hero/hero-warm-salon.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Serif:ital,wght@1,400&display=swap" rel="stylesheet">
@@ -207,7 +216,13 @@ function App() {
       setProduct(p);
       setAllProducts(all);
       if (p) {
-        document.title = `${p.title} — Perle de l'Atlas`;
+        document.title = `${p.title} — Atlas Perle`;
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogImg = document.querySelector('meta[property="og:image"]');
+        if (ogTitle) ogTitle.content = `${p.title} — Atlas Perle`;
+        if (ogDesc) ogDesc.content = p.description || `Handcrafted ${p.title}, signed by the artisan.`;
+        if (ogImg && p.images?.[0]) ogImg.content = `https://www.atlasperle.com${SB.productImageUrl(p.images[0])}`;
         window.dataLayer && window.dataLayer.push({event:'view_item',item_id:p.id,item_name:p.title,price:p.price/100,currency:'USD',item_category:p.category});
       }
       setLoading(false);
