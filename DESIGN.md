@@ -1,6 +1,6 @@
 ---
 version: alpha
-name: Perle de l'Atlas
+name: Maison Izem
 description: Dark luxury e-commerce for handcrafted Moroccan objects. The visual language evokes an old medina workshop — low light, raw materials, brass warmth against deep ink.
 colors:
   # Darks — background hierarchy
@@ -138,11 +138,11 @@ components:
     typography: "{typography.nav}"
 ---
 
-# Perle de l'Atlas Design System
+# Maison Izem Design System
 
 ## Overview
 
-Perle de l'Atlas is a luxury e-commerce catalogue for handcrafted Moroccan objects — brass, bone, leather, cedar, plaster, lacquer. The visual identity channels the atmosphere of a dimly lit riad workshop: raw brass catching lamplight against ink-dark walls, dust motes in warm air, parchment ledgers.
+Maison Izem is a luxury e-commerce catalogue for handcrafted Moroccan objects — brass, bone, leather, cedar, plaster, lacquer. The visual identity channels the atmosphere of a dimly lit riad workshop: raw brass catching lamplight against ink-dark walls, dust motes in warm air, parchment ledgers.
 
 **Mood**: Quiet opulence. Not flashy or maximalist. The luxury reads through restraint — generous whitespace, unhurried typography, and a muted palette punctuated only by warm brass.
 

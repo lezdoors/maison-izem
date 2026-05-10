@@ -1,8 +1,8 @@
-# Atlas Perle — Project Instructions
+# Maison Izem — Project Instructions
 
 ## Brand Identity
 
-Atlas Perle is a **luxury editorial brand** that sources directly from Moroccan artisan workshops. The positioning is closer to RH, Soho Home, Apparatus, and Artemest than to any Moroccan marketplace or decor catalog.
+Maison Izem is a **luxury editorial brand** that sources directly from Moroccan artisan workshops. The positioning is closer to RH, Soho Home, Apparatus, and Artemest than to any Moroccan marketplace or decor catalog.
 
 **Core line**: "Objects drawn from the medina."
 
@@ -87,7 +87,7 @@ Luxury pricing is intentional. Low pricing hurts perception. A handcrafted side 
 - **Payments**: Stripe (test mode)
 - **Email**: Resend
 - **Hosting**: Vercel (auto-deploy from GitHub `lezdoors/atlas-dark`)
-- **Domains**: atlasperle.com, www.atlasperle.com, atlas-dark.vercel.app
+- **Domains**: maisonizem.com (pending purchase), www.maisonizem.com, atlas-dark.vercel.app (preview)
 
 ### Key technical patterns
 - `shared.js` exports components via `window` (Nav, Footer, CartBadge, Reveal, WordReveal, LangProvider, etc.)
