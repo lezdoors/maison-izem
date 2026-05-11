@@ -87,7 +87,7 @@ Luxury pricing is intentional. Low pricing hurts perception. A handcrafted side 
 - **Payments**: Stripe (test mode)
 - **Email**: Resend
 - **Hosting**: Vercel (auto-deploy from GitHub `lezdoors/atlas-dark`)
-- **Domains**: maisonizem.com (pending purchase), www.maisonizem.com, atlas-dark.vercel.app (preview)
+- **Domains**: maisonizem.com (purchased 2026-05-10 via Vercel registrar, attached to atlas-dark project), www.maisonizem.com, atlas-dark.vercel.app (preview)
 
 ### Key technical patterns
 - `shared.js` exports components via `window` (Nav, Footer, CartBadge, Reveal, WordReveal, LangProvider, etc.)
