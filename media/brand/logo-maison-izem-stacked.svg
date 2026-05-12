@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Maison Izem — Marrakech">
   <style>
-    .m     { font-family: 'Cormorant Garamond','Bodoni 72',Didot,'Times New Roman',Georgia,serif;
-             font-weight: 300; font-size: 92px; letter-spacing: 0; fill: #1a1a1a; }
-    .wm    { font-family: 'Cormorant Garamond','Bodoni 72',Didot,'Times New Roman',Georgia,serif;
-             font-weight: 300; font-size: 56px; letter-spacing: 0.18em; fill: #1a1a1a; }
+    .m     { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
+             font-weight: 700; font-size: 100px; letter-spacing: 0; fill: #1a1a1a; }
+    .wm    { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
+             font-weight: 700; font-size: 68px; letter-spacing: -0.025em; fill: #1a1a1a; }
     .tag   { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
-             font-weight: 500; font-size: 12px; letter-spacing: 0.62em; fill: #1a1a1a; }
-    .ring  { fill: none; stroke: #1a1a1a; stroke-width: 1; }
-    .rule  { stroke: #1a1a1a; stroke-width: 1; }
+             font-weight: 600; font-size: 12px; letter-spacing: 0.55em; fill: #1a1a1a; opacity: 0.7; }
+    .ring  { fill: none; stroke: #1a1a1a; stroke-width: 1.5; }
   </style>
-  <!-- monogram in circle -->
-  <circle class="ring" cx="300" cy="80" r="58" />
-  <text class="m" x="300" y="111" text-anchor="middle">M</text>
+  <!-- m monogram in circle -->
+  <circle class="ring" cx="300" cy="84" r="62" />
+  <text class="m" x="300" y="118" text-anchor="middle">m</text>
   <!-- wordmark -->
-  <text class="wm" x="300" y="220" text-anchor="middle">MAISON IZEM</text>
-  <line class="rule" x1="280" y1="245" x2="320" y2="245" />
-  <text class="tag" x="304" y="276" text-anchor="middle">MARRAKECH</text>
+  <text class="wm" x="300" y="232" text-anchor="middle">maison izem</text>
+  <text class="tag" x="307" y="268" text-anchor="middle">MARRAKECH</text>
 </svg>
