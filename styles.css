@@ -97,10 +97,15 @@ nav.top{
   border-bottom:1px solid transparent;
 }
 nav.top.scrolled{background:rgba(10,8,7,.78);backdrop-filter:blur(14px) saturate(1.2);border-bottom-color:var(--line);padding:14px 48px}
-nav .brand{display:flex;align-items:baseline;gap:10px}
-nav .brand .name{font-family:var(--f-serif);font-size:24px;letter-spacing:.02em;font-weight:400;white-space:nowrap}
-nav .brand .name em{font-style:italic;color:var(--brass)}
-nav .brand .pin{width:5px;height:5px;border-radius:50%;background:var(--brass);box-shadow:0 0 8px rgba(201,162,74,.6)}
+/* Maison Izem brand mark — Tiffany/Hermès register: classical serif uppercase wordmark + narrow letter-spaced city tagline */
+nav .brand{display:flex;flex-direction:column;align-items:center;gap:3px;line-height:1;text-decoration:none}
+nav .brand .wordmark{font-family:var(--f-serif);font-size:21px;letter-spacing:.18em;text-transform:uppercase;font-weight:300;color:var(--bone);white-space:nowrap}
+nav .brand .tagline{font-family:var(--f-sans);font-size:8.5px;letter-spacing:.55em;text-transform:uppercase;font-weight:500;color:var(--bone);opacity:.55;padding-left:.55em}
+nav.scrolled .brand .wordmark,nav.scrolled .brand .tagline{color:var(--ink)}
+@media(max-width:760px){
+  nav .brand .wordmark{font-size:17px;letter-spacing:.15em}
+  nav .brand .tagline{font-size:7.5px;letter-spacing:.45em}
+}
 nav .links{display:flex;justify-content:center;gap:22px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
 nav .links a{opacity:.7;padding:8px 0;position:relative;transition:opacity .3s,color .3s}
 nav .links a:hover{opacity:1;color:var(--brass-hi)}

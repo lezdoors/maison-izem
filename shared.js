@@ -280,9 +280,9 @@ function Nav() {
   return (
     <>
     <nav className={`top ${scrolled ? "scrolled" : ""}`}>
-      <a className="brand" href="/">
-        <span className="pin"/>
-        <span className="name">Maison <em>Izem</em></span>
+      <a className="brand" href="/" aria-label="Maison Izem — Marrakech">
+        <span className="wordmark">Maison Izem</span>
+        <span className="tagline">Marrakech</span>
       </a>
       <div className="links">
         {links.map(([href, key]) => <a href={href} key={href}>{t(key)}</a>)}
