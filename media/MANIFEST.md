@@ -65,7 +65,7 @@ Examples:
 | hero-candidate-{01..05}.mp4 | older Higgsfield (warm-riad) | ARCHIVED | 2026-05-10 | various |
 | hero-loop.mp4 | older (warm-riad) | ARCHIVED | 2026-05-10 | — |
 
-### Products — atelier restages shipped 2026-05-11 (warm-tadelakt context, needs white-cyclorama re-shoot for PDP)
+### Products — atelier restages shipped 2026-05-11 (warm-tadelakt context, used in editorial sections)
 
 Pendants (14): noor, hilal, layla, najma, falak, warda, bayt, bayda, qubba, sirage, samar, nadia, zahra, mishkat
 Lamps (2): fanous, kandil
@@ -73,9 +73,25 @@ Sconces (3): diya, manara, minbar
 Lanterns (2): fanar, mishbah
 Plates (5): tabaq, khatam, shams, riad, tarsi
 Vessels (5): jarra, sandouq, kasr, ibriq, tazza
-Broken — needs regen: atelier-lantern-03 (pink plastic wrap not removed by Higgsfield)
 
-Each currently exists as `media/products/{slug}.webp` (warm-tadelakt). PDP-white variants pending — see task #21.
+Each exists as `media/products/{slug}.webp` (warm-tadelakt, editorial use).
+
+### Products — PDP white-cyclorama batch shipped 2026-05-11 (Roche-Bobois / Anthropologie register)
+
+32 PDP primary shots, pure white seamless infinity cyclorama, 4:5 vertical, generated via Higgsfield `nano_banana_2` image-to-image at 2k aspect using `media/products/{slug}.webp` as reference (form preserved, background swapped).
+
+Pendants (14): noor, hilal, layla, najma, falak, warda, bayt, bayda, qubba, sirage, samar, nadia, zahra, mishkat
+Lamps (2): fanous, kandil
+Sconces (3): diya, manara, minbar
+Lanterns (3): fanar, mishbah, mishaal (regenerated from broken atelier-lantern-03 with plastic wrap removed)
+Wall plates (5): tabaq, khatam, shams, riad, tarsi
+Vessels (5): jarra, sandouq, kasr, ibriq, tazza
+
+Files:
+- `media/products/pdp-white/{slug}-pdp-white.webp` — 7.9MB total, ships in Vercel
+- `media/products/raw/{slug}-pdp-white-2k.png` — 168MB total, gitignored, lives in Drive only
+
+Drive mirror: `03-Products/web/{category}/` (auto-categorized by `scripts/sync-to-drive.sh`).
 
 ### Wood furniture (Damouh's Phase 1 — pending regeneration in new direction)
 

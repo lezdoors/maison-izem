@@ -10,4 +10,5 @@ _index_old.html.bak
 # Asset organization — raw 4K masters live in Google Drive only (too big for git)
 # Web-ready derivatives in media/hero/web, media/products, media/lifestyle ARE committed
 media/hero/raw/*.png
+media/products/raw/
 media/atelier-restaged/
