@@ -326,7 +326,7 @@ function Footer() {
     <footer className="main" data-screen-label="06 Footer">
       <div className="inner">
         <Reveal speed="reveal-slow" style={{position:"relative"}}>
-          <div className="big">Maison <em>Izem.</em><span className="mk">{t("hero.meta2L")} · {t("hero.meta2R").split("·")[0].trim()}</span></div>
+          <div className="big">Maison Izem<span className="mk">{t("hero.meta2L")} · {t("hero.meta2R").split("·")[0].trim()}</span></div>
           <div className="sub">{t("ft.sub")}</div>
         </Reveal>
         <div className="cols">
