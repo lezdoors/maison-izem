@@ -23,22 +23,22 @@ Single source of truth for what shots exist per SKU and what's missing before we
 ✅ = on disk · ⏳ = generation queued · ❌ = missing
 
 ### Pendants (14)
-All 14: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · ✅ Lit · ❌ Scale · ✅ Etsy 1:1
+All 14: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · ✅ Lit · ✅ Scale · ✅ Etsy 1:1
 
 ### Lamps (2)
-All 2: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · ✅ Lit · ❌ Scale · ✅ Etsy 1:1
+All 2: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · ✅ Lit · ✅ Scale · ✅ Etsy 1:1
 
 ### Sconces (3)
-All 3: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · ✅ Lit · ❌ Scale · ✅ Etsy 1:1
+All 3: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · ✅ Lit · ✅ Scale · ✅ Etsy 1:1
 
 ### Lanterns (3)
-All 3: ✅ PDP · ✅ Editorial (mishaal pending) · ✅ Macro · ✅ Alt · ✅ Lit · ❌ Scale · ✅ Etsy 1:1
+All 3: ✅ PDP · ✅ Editorial (mishaal pending) · ✅ Macro · ✅ Alt · ✅ Lit · ✅ Scale · ✅ Etsy 1:1
 
 ### Wall plates (5) — lit shot not applicable
-All 5: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · — Lit · ❌ Scale · ✅ Etsy 1:1
+All 5: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · — Lit · ✅ Scale · ✅ Etsy 1:1
 
 ### Vessels (5) — lit shot not applicable
-All 5: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · — Lit · ❌ Scale · ✅ Etsy 1:1
+All 5: ✅ PDP · ✅ Editorial · ✅ Macro · ✅ Alt · — Lit · ✅ Scale · ✅ Etsy 1:1
 
 ## Generation budget
 
