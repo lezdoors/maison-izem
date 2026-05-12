@@ -26,24 +26,48 @@ rsync -av --delete --exclude='.DS_Store' "$LOCAL_MEDIA/hero/"      "$DRIVE_ROOT/
 rsync -av --delete --exclude='.DS_Store' "$LOCAL_MEDIA/lifestyle/" "$DRIVE_ROOT/04-Lifestyle/" | tail -3
 [[ -d "$LOCAL_MEDIA/archive" ]] && rsync -av --exclude='.DS_Store' "$LOCAL_MEDIA/archive/" "$DRIVE_ROOT/99-Archive/" | tail -3
 
-# Categorized products: each .webp goes to 03-Products/web/{category}/
-# (local stays flat — this is the Drive view for humans/fleet)
+# Categorized products: each .webp goes to 03-Products/web/{category}/{shot-type-subfolder?}/
+# (local stays flat-ish — this is the Drive view for humans/fleet)
+# Walks the root + all shot-type subfolders: pdp-white, macro, alt-white, lit, scale, etsy-1x1
 echo "[sync-to-drive] categorizing products..."
 PRODUCTS_DEST="$DRIVE_ROOT/03-Products/web"
 copied=0
 skipped=0
 shopt -s nullglob
-for f in "$LOCAL_MEDIA/products/"*.webp; do
-  base="$(basename "$f")"
-  cat="$(categorize "$base")"
-  dest="$PRODUCTS_DEST/$cat/$base"
-  if [[ -f "$dest" ]] && [[ "$f" -ot "$dest" || ! "$f" -nt "$dest" ]]; then
-    skipped=$((skipped+1))
-  else
-    cp -p "$f" "$dest"
-    copied=$((copied+1))
+
+sync_product_dir() {
+  local src_dir="$1" shot_type="$2"
+  for f in "$src_dir"/*.webp; do
+    [[ -f "$f" ]] || continue
+    local base cat dest_dir dest
+    base="$(basename "$f")"
+    cat="$(categorize "$base")"
+    if [[ -n "$shot_type" ]]; then
+      dest_dir="$PRODUCTS_DEST/$cat/$shot_type"
+    else
+      dest_dir="$PRODUCTS_DEST/$cat"
+    fi
+    mkdir -p "$dest_dir"
+    dest="$dest_dir/$base"
+    if [[ -f "$dest" ]] && [[ "$f" -ot "$dest" || ! "$f" -nt "$dest" ]]; then
+      skipped=$((skipped+1))
+    else
+      cp -p "$f" "$dest"
+      copied=$((copied+1))
+    fi
+  done
+}
+
+# Editorial restages (warm-tadelakt) live flat at media/products/{slug}.webp
+sync_product_dir "$LOCAL_MEDIA/products" ""
+
+# Per-shot-type subfolders — mirrored under each category as a shot-type subfolder
+for shot_type in pdp-white macro alt-white lit scale etsy-1x1; do
+  if [[ -d "$LOCAL_MEDIA/products/$shot_type" ]]; then
+    sync_product_dir "$LOCAL_MEDIA/products/$shot_type" "$shot_type"
   fi
 done
+
 echo "[sync-to-drive] products: $copied copied, $skipped already current"
 
 # Manifest + brand docs
