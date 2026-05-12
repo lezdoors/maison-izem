@@ -31,42 +31,57 @@ Not metal, leather, wood, or brass. They are buying:
 
 ## Design Principles
 
-Every design decision must reinforce:
-- **Restraint** — the restraint itself is part of the luxury
-- **Sophistication** — quietly expensive, never loud
-- **Cinematic warmth** — dimly lit luxury interiors, brass reflections, shadow and texture
-- **Editorial luxury** — Architectural Digest, boutique riads, museum/gallery presentation
-- **Curated scarcity** — fewer products visible at once, the website should feel curated not stocked
-- **Timelessness** — slow luxury, no trend-chasing
+## Visual direction (locked 2026-05-11 — supersedes prior "dim riad / brass-only" brief)
 
-### Emotional references
-- Dimly lit luxury interiors
-- Architectural Digest homes
-- Boutique riads
-- Warm brass reflections against dark surfaces
-- Handcrafted materials, shadow and texture
-- Museum/gallery presentation
-- Slow luxury
+**Two coexisting visual modes:**
 
-### Hard rules
+### Mode 1 — White commerce shell (homepage, collection, PDP, cart, checkout)
+The selling surface. Roche-Bobois × Anthropologie × Pierre Yovanovitch Marrakech.
+
+- **Background**: pure white #FFFFFF for product PDP cyclorama shots, ivory/off-white for category pages
+- **Hero / lifestyle**: bright contemporary architecture (white plastered walls, pale oak floor, steel-mullioned windows, double-height ceilings) hosting richly-colored Moroccan craft as anchor
+- **Saturated jewel-tone palette**: majorelle blue, deep emerald, saffron yellow, terracotta, magenta — accepted and encouraged as room accents
+- **Light**: BRIGHT diffuse natural daylight. NOT golden hour, NOT candlelit, NOT dim
+- **Composition**: maximalist Moroccan craft inside RB-Mah-Jong architectural spaciousness — colorful pieces breathe in generous negative space
+- **References**: roche-bobois.com (Mah Jong sectional installations), YSL Marrakech / Jardin Majorelle, Royal Mansour suites, Pierre Yovanovitch Marrakech projects, Studio KO architecture
+
+### Mode 2 — Dark editorial gallery (`/atelier` route)
+The brand storytelling wing. Embedded as a featured section on the white homepage AND as a standalone deep-link.
+
+- **Background**: deep ink/night palette (existing dark site tokens)
+- **Mood**: dimly lit, candlelit, warm brass reflections, riad atmosphere, mashrabiya shadows
+- **Use**: editorial features, "the house" story, atelier/maalem narratives, behind-the-scenes
+- **References**: Architectural Digest editorial spreads, boutique riads at dusk, RH Source Book
+
+### Hard rules (apply to both modes)
 - No border-radius anywhere
 - No box shadows (use borders and gradients)
 - No emoji in the interface
-- No second accent color (brass only)
 - No cheap gradients/glows
-- No generic ecommerce widgets
+- No generic ecommerce widgets ("Buy 2 get 1 free" banners, blinking sale tags)
 - No "template" feeling
-- No overcrowded UI or loud Moroccan bazaar aesthetics
+- No overcrowded UI or loud souk-style bazaar aesthetics
 - No aggressive sales tactics
 - If something feels even slightly mass-market or generic, simplify it or remove it
 - One cheap-looking component can collapse luxury perception — consistency matters more than features
+
+### Mode-specific color rules
+- **White mode**: saturated Moroccan jewel tones (cobalt, emerald, saffron, terracotta) are encouraged in lifestyle photography. UI itself stays neutral (ivory bg, charcoal type, brass-only UI accents — no rainbow buttons)
+- **Dark mode**: brass-only accent (existing). No jewel tones in UI; saturation lives in lifestyle imagery only.
 
 ### Design specifics
 - Fewer products visible at once, larger imagery
 - Stronger typography, more whitespace, slower pacing
 - Cinematic transitions, immersive sections
-- Environmental photography, product-in-context storytelling
+- Environmental photography, product-in-context storytelling — but always anchored in modern architecture, never a dressed Moroccan film set
 - Objects should feel architectural and atmospheric
+
+### Photography directive (for any AI image generation)
+- PDP primary product shots → pure white seamless cyclorama, soft diffuse overhead fill, 3/4 angle, no harsh shadows
+- Lifestyle / hero → bright contemporary room (RB/RH architecture) with saturated Moroccan accent piece(s) and jewel-tone color anchors
+- Macro / detail → tight, abstract, almost graphic — RB/Apparatus aesthetic
+- NEVER generate: dim candlelit interiors, golden-hour orange wash, mashrabiya screens dominating the frame, zellige-tiled floors as primary surface, supplier-shop backgrounds (plastic wrap, motorbikes, dirt alleys), maalem hands as the focal point (those belong in the dark `/atelier` editorial only)
+- Hero direction reference (Hero A, locked 2026-05-11): emerald velvet sofa, majorelle blue accent wall, octagonal MOP coffee table, perforated brass pendant overhead, saffron+terracotta kilim, olive tree in terracotta pot, steel-mullioned French doors with sheer linen, bright cool daylight from both sides. File: `media/hero/raw/hero-emerald-majorelle-poster-4k.png`
 
 ## Product Strategy
 
