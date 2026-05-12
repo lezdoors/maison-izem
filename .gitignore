@@ -12,3 +12,7 @@ _index_old.html.bak
 media/hero/raw/*.png
 media/products/raw/
 media/atelier-restaged/
+
+# Per-machine MCP integrations (each fleet machine installs locally; secrets here)
+integrations/*/
+!integrations/README.md
