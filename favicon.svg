@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" role="img" aria-label="mi · Maison Izem">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Maison Izem">
   <style>
     .mi { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
-          font-weight: 800; font-size: 34px; letter-spacing: -0.05em; fill: #1a1a1a; }
+          font-weight: 800; font-size: 28px; letter-spacing: -0.06em; fill: #1a1a1a; }
+    @media (prefers-color-scheme: dark) { .mi { fill: #f5f1ea; } }
   </style>
-  <text class="mi" x="50" y="32" text-anchor="middle">mi</text>
+  <text class="mi" x="16" y="24" text-anchor="middle">mi</text>
 </svg>
