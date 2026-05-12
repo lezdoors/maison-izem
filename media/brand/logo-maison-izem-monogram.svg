@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Maison Izem monogram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Maison Izem monogram — mi">
   <style>
-    .m     { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
-             font-weight: 700; font-size: 150px; letter-spacing: -0.02em; fill: #1a1a1a; }
+    .mi    { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
+             font-weight: 700; font-size: 110px; letter-spacing: -0.04em; fill: #1a1a1a; }
     .ring  { fill: none; stroke: #1a1a1a; stroke-width: 1.5; }
   </style>
   <circle class="ring" cx="100" cy="100" r="86" />
-  <text class="m" x="100" y="148" text-anchor="middle">m</text>
+  <text class="mi" x="100" y="138" text-anchor="middle">mi</text>
 </svg>

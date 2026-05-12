@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Maison Izem — Marrakech">
   <style>
-    .m     { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
-             font-weight: 700; font-size: 100px; letter-spacing: 0; fill: #1a1a1a; }
+    .mi    { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
+             font-weight: 700; font-size: 84px; letter-spacing: -0.04em; fill: #1a1a1a; }
     .wm    { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
              font-weight: 700; font-size: 68px; letter-spacing: -0.025em; fill: #1a1a1a; }
     .tag   { font-family: 'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;
              font-weight: 600; font-size: 12px; letter-spacing: 0.55em; fill: #1a1a1a; opacity: 0.7; }
     .ring  { fill: none; stroke: #1a1a1a; stroke-width: 1.5; }
   </style>
-  <!-- m monogram in circle -->
+  <!-- mi monogram in circle -->
   <circle class="ring" cx="300" cy="84" r="62" />
-  <text class="m" x="300" y="118" text-anchor="middle">m</text>
+  <text class="mi" x="300" y="114" text-anchor="middle">mi</text>
   <!-- wordmark -->
   <text class="wm" x="300" y="232" text-anchor="middle">maison izem</text>
   <text class="tag" x="307" y="268" text-anchor="middle">MARRAKECH</text>
