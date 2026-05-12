@@ -32,13 +32,30 @@
 <script type="text/babel" data-presets="react">
 const CATEGORIES = [
   {id: "all", label: "All"},
-  {id: "Poufs", label: "Poufs"},
-  {id: "Tables", label: "Tables"},
-  {id: "Lighting", label: "Lighting"},
   {id: "Furniture", label: "Furniture"},
+  {id: "Tables", label: "Tables"},
+  {id: "Pendants", label: "Pendants"},
+  {id: "Lamps", label: "Lamps"},
+  {id: "Sconces", label: "Sconces"},
+  {id: "Lanterns", label: "Lanterns"},
+  {id: "Lighting", label: "Lighting"},
+  {id: "Wall Plates", label: "Wall plates"},
+  {id: "Vessels", label: "Vessels"},
+  {id: "Poufs", label: "Poufs"},
 ];
 
-const CAT_LABELS = {Poufs:"Poufs",Tables:"Tables",Lighting:"Lighting",Furniture:"Furniture"};
+const CAT_LABELS = {
+  Poufs: "Poufs",
+  Tables: "Tables",
+  Lighting: "Lighting",
+  Furniture: "Furniture",
+  Pendants: "Pendants",
+  Lamps: "Lamps",
+  Sconces: "Sconces",
+  Lanterns: "Lanterns",
+  "Wall Plates": "Wall plates",
+  Vessels: "Vessels",
+};
 
 function isEditionClosed(product) {
   return product.status === 'closed' || product.edition_remaining === 0;
