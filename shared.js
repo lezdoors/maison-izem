@@ -281,7 +281,7 @@ function Nav() {
     <>
     <nav className={`top ${scrolled ? "scrolled" : ""}`}>
       <a className="brand" href="/" aria-label="Maison Izem — Marrakech">
-        <span className="wordmark">Maison Izem</span>
+        <span className="wordmark"><span className="wm-heavy">maison</span><span className="wm-light">izem</span></span>
         <span className="tagline">Marrakech</span>
       </a>
       <div className="links">
@@ -326,7 +326,7 @@ function Footer() {
     <footer className="main" data-screen-label="06 Footer">
       <div className="inner">
         <Reveal speed="reveal-slow" style={{position:"relative"}}>
-          <div className="big">Maison Izem<span className="mk">{t("hero.meta2L")} · {t("hero.meta2R").split("·")[0].trim()}</span></div>
+          <div className="big"><span className="wm-heavy">maison</span><span className="wm-light">izem</span><span className="mk">{t("hero.meta2L")} · {t("hero.meta2R").split("·")[0].trim()}</span></div>
           <div className="sub">{t("ft.sub")}</div>
         </Reveal>
         <div className="cols">

@@ -97,9 +97,11 @@ nav.top{
   border-bottom:1px solid transparent;
 }
 nav.top.scrolled{background:rgba(10,8,7,.78);backdrop-filter:blur(14px) saturate(1.2);border-bottom-color:var(--line);padding:14px 48px}
-/* Maison Izem brand mark — Roche Bobois register: bold lowercase compressed sans wordmark + narrow letter-spaced city tagline */
+/* Maison Izem brand mark — Roche Bobois register: two-weight lowercase sans wordmark, no space between words */
 nav .brand{display:flex;flex-direction:column;align-items:center;gap:5px;line-height:1;text-decoration:none}
-nav .brand .wordmark{font-family:var(--f-sans);font-size:26px;letter-spacing:-.012em;text-transform:lowercase;font-weight:700;color:var(--bone);white-space:nowrap}
+nav .brand .wordmark{font-family:var(--f-sans);font-size:26px;letter-spacing:-.018em;text-transform:lowercase;color:var(--bone);white-space:nowrap;display:inline-flex}
+nav .brand .wordmark .wm-heavy{font-weight:800}
+nav .brand .wordmark .wm-light{font-weight:400}
 nav .brand .tagline{font-family:var(--f-sans);font-size:8.5px;letter-spacing:.55em;text-transform:uppercase;font-weight:600;color:var(--bone);opacity:.6;padding-left:.55em}
 nav.scrolled .brand .wordmark,nav.scrolled .brand .tagline{color:var(--ink)}
 @media(max-width:760px){
@@ -420,7 +422,9 @@ nav .right .cart .n{width:18px;height:18px;border-radius:50%;background:var(--br
 footer.main{background:#05040300;position:relative;padding:120px 0 40px;color:var(--bone);border-top:1px solid var(--line-brass)}
 footer.main::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right, transparent, var(--brass), transparent)}
 footer .inner{max-width:1440px;margin:0 auto;padding:0 48px}
-footer .big{font-family:var(--f-sans);font-weight:700;font-size:clamp(60px,11vw,200px);line-height:.9;letter-spacing:-.025em;text-transform:lowercase;color:var(--bone);position:relative}
+footer .big{font-family:var(--f-sans);font-size:clamp(60px,11vw,200px);line-height:.9;letter-spacing:-.03em;text-transform:lowercase;color:var(--bone);position:relative;display:inline-flex;align-items:baseline}
+footer .big .wm-heavy{font-weight:800}
+footer .big .wm-light{font-weight:400}
 footer .big .mk{position:absolute;top:8px;right:0;font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);writing-mode:vertical-rl;transform:rotate(180deg)}
 footer .sub{margin-top:20px;font-family:var(--f-serif);font-style:italic;font-size:22px;color:var(--oyster);font-weight:300;max-width:40ch}
 footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:48px;padding:72px 0 40px;border-top:1px solid var(--line);margin-top:72px}
