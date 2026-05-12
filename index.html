@@ -68,21 +68,26 @@
 .brand-story .copy p{font-size:16px;line-height:1.8;color:var(--parchment);font-weight:300;margin-bottom:16px}
 @media(max-width:900px){.brand-story{padding:60px 20px}.brand-story .inner{grid-template-columns:1fr;gap:32px}}
 
-/* Lifestyle gallery */
-.lifestyle{padding:100px 0;background:var(--night);border-top:1px solid var(--line)}
-.lifestyle .inner{max-width:1440px;margin:0 auto;padding:0 48px}
-.lifestyle .head{margin-bottom:48px}
-.lifestyle h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(32px,4vw,56px);line-height:1;color:var(--bone)}
-.lifestyle h2 em{font-style:italic;color:var(--brass)}
-.lifestyle .mosaic{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
-.lifestyle .mosaic .tile{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--espresso)}
-.lifestyle .mosaic .tile.wide{grid-column:span 2;aspect-ratio:16/9}
-.lifestyle .mosaic .tile.tall{grid-row:span 2;aspect-ratio:3/5}
-.lifestyle .mosaic .tile.sq{aspect-ratio:1/1}
-.lifestyle .mosaic .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.88) contrast(1.05) saturate(1.05);transition:transform 1.6s var(--ease-in-out)}
-.lifestyle .mosaic .tile:hover img{transform:scale(1.06)}
-.lifestyle .mosaic .tile .cap{position:absolute;bottom:0;left:0;right:0;padding:16px 18px;z-index:2;font-family:var(--f-mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);background:linear-gradient(transparent, rgba(10,8,7,.7))}
-@media(max-width:900px){.lifestyle{padding:60px 0}.lifestyle .inner{padding:0 20px}.lifestyle .mosaic{grid-template-columns:1fr 1fr}.lifestyle .mosaic .tile.wide{grid-column:span 2}.lifestyle .mosaic .tile.tall{grid-row:span 1;aspect-ratio:4/5}}
+/* Editorial features — Roche-Bobois "Le Mag" pattern in dark */
+.editorial{background:var(--night);border-top:1px solid var(--line)}
+.editorial .head-rail{max-width:1440px;margin:0 auto;padding:96px 48px 48px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.editorial .head-rail h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em;color:var(--bone)}
+.editorial .head-rail h2 em{font-style:italic;color:var(--brass)}
+.editorial .feature{max-width:1440px;margin:0 auto;padding:64px 48px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center;border-top:1px solid var(--line)}
+.editorial .feature.reverse{grid-template-columns:0.9fr 1.1fr}
+.editorial .feature.reverse .feat-media{order:2}
+.editorial .feature.reverse .feat-copy{order:1}
+.editorial .feat-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--espresso);border:1px solid var(--line)}
+.editorial .feat-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.92) contrast(1.05) saturate(1.04);transition:transform 1.8s var(--ease-in-out)}
+.editorial .feature:hover .feat-media img{transform:scale(1.04)}
+.editorial .feat-copy{padding:24px 0}
+.editorial .feat-copy .eyebrow{font-family:var(--f-mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.editorial .feat-copy h3{font-family:var(--f-serif);font-weight:300;font-size:clamp(28px,3.5vw,48px);line-height:1.05;letter-spacing:-.015em;color:var(--bone);margin-bottom:20px}
+.editorial .feat-copy h3 em{font-style:italic;color:var(--brass)}
+.editorial .feat-copy p{font-family:var(--f-serif);font-style:italic;font-size:18px;line-height:1.6;color:var(--parchment);max-width:48ch;font-weight:300;margin-bottom:28px}
+.editorial .feat-copy .feat-cta{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:6px;transition:gap .3s ease,color .3s ease}
+.editorial .feat-copy .feat-cta:hover{gap:18px;color:var(--bone)}
+@media(max-width:900px){.editorial .head-rail{padding:60px 20px 32px}.editorial .feature,.editorial .feature.reverse{grid-template-columns:1fr;gap:32px;padding:40px 20px}.editorial .feature.reverse .feat-media{order:1}.editorial .feature.reverse .feat-copy{order:2}.editorial .feat-media{aspect-ratio:4/5}}
 
 /* Provenance rail */
 .prov-rail{background:var(--ink);border-top:1px solid var(--line)}
@@ -273,38 +278,62 @@ function FeaturedProducts() {
   );
 }
 
-// ============ LIFESTYLE GALLERY ============
-function LifestyleGallery() {
+// ============ EDITORIAL FEATURES (Roche-Bobois "Le Mag" pattern, dark) ============
+function EditorialFeatures() {
+  const features = [
+    {
+      eyebrow: "Le passage — Riad",
+      title: <>A cascade <em>of brass.</em></>,
+      body: "Forty-three pierced pendants suspended over the atrium of a private riad in Derb el Ferran. Each lantern hammered by a single maalem; each chain hung by hand.",
+      cta: "Read the dispatch",
+      href: "/atelier#passage",
+      image: "/media/lifestyle/editorial-passage-01.jpg",
+      alt: "A cascade of brass pendants in a Marrakech riad atrium",
+      reverse: false,
+    },
+    {
+      eyebrow: "Dinanderie — At the bench",
+      title: <>Brass, by <em>the hand.</em></>,
+      body: "Nine days at the bench. One pair of hands. The chasing tool follows a pattern that has been passed down five generations — never written, never measured.",
+      cta: "Meet the maalem",
+      href: "/atelier#dinanderie",
+      image: "/media/lifestyle/editorial-interieur-01.jpg",
+      alt: "An artisan engraves brass at the workbench",
+      reverse: true,
+    },
+    {
+      eyebrow: "Lumière — La nuit",
+      title: <>The medina, <em>after dark.</em></>,
+      body: "When the souks close and the lanterns are lit, the medina becomes a room of light. This is the atmosphere our objects were designed to live in.",
+      cta: "View the lighting",
+      href: "/collection?category=lighting",
+      image: "/media/lifestyle/editorial-medina-lumiere-01.jpg",
+      alt: "Pierced brass pendants lit at night in the Marrakech medina",
+      reverse: false,
+    },
+  ];
   return (
-    <section className="lifestyle">
-      <div className="inner">
-        <Reveal className="head">
-          <div className="eyebrow" style={{marginBottom:16}}>In the home</div>
-          <h2>Objects in <em>context.</em></h2>
-        </Reveal>
-        <div className="mosaic">
-          <Reveal className="tile wide">
-            <img src="/media/lifestyle/editorial-salon-sedari-01.webp" alt="Salon — Marrakech" loading="lazy"/>
-            <div className="cap">Le salon — Marrakech</div>
-          </Reveal>
-          <Reveal className="tile sq" delay={100}>
-            <img src="/media/lifestyle/editorial-lanterne-cuivre-01.jpg" alt="Pierced brass lantern" loading="lazy"/>
-            <div className="cap">Lanterne — cuivre</div>
-          </Reveal>
-          <Reveal className="tile sq" delay={150}>
-            <img src="/media/lifestyle/editorial-interieur-01.jpg" alt="Artisan engraving brass" loading="lazy"/>
-            <div className="cap">Dinanderie — at the bench</div>
-          </Reveal>
-          <Reveal className="tile sq" delay={200}>
-            <img src="/media/products/chouara-lifestyle-01.webp" alt="Chouara pouf" loading="lazy"/>
-            <div className="cap">Chouara</div>
-          </Reveal>
-          <Reveal className="tile wide" delay={250}>
-            <img src="/media/lifestyle/editorial-passage-01.jpg" alt="Brass pendants — Riad passage" loading="lazy"/>
-            <div className="cap">Le passage — Riad</div>
-          </Reveal>
+    <section className="editorial">
+      <Reveal className="head-rail">
+        <div>
+          <div className="eyebrow" style={{marginBottom:16}}>Le journal</div>
+          <h2>Dispatches from <em>the medina.</em></h2>
         </div>
-      </div>
+        <a className="link-u" href="/atelier">Read all dispatches →</a>
+      </Reveal>
+      {features.map((f, i) => (
+        <Reveal className={f.reverse ? "feature reverse" : "feature"} key={i} delay={i * 100}>
+          <div className="feat-media">
+            <img src={f.image} alt={f.alt} loading="lazy"/>
+          </div>
+          <div className="feat-copy">
+            <div className="eyebrow">— {f.eyebrow}</div>
+            <h3>{f.title}</h3>
+            <p>{f.body}</p>
+            <a className="feat-cta" href={f.href}>{f.cta} <span>→</span></a>
+          </div>
+        </Reveal>
+      ))}
     </section>
   );
 }
@@ -385,8 +414,8 @@ function App() {
       <Nav/>
       <Hero/>
       <Ticker/>
+      <EditorialFeatures/>
       <FeaturedProducts/>
-      <LifestyleGallery/>
       <BrandStory/>
       <ProvenanceRail/>
       <Services/>
